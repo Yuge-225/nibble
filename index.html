@@ -63,18 +63,18 @@
     </div>
 
     <div class="pane on" data-pane="drag">
-      <p class="prompt"><span class="pulse"></span>Drag a file onto the little Nibble on the laptop.</p>
+      <p class="prompt"><span class="pulse"></span>Each file is a job. Drag one onto the little Nibble.</p>
       <div class="stage" id="st-drag"><div class="stage-inner">
         <div class="desk"></div>
         <div class="laptop" style="left:18px">
           <div class="laptop-screen">
             <div class="desktop">
-              <div class="file" data-kind="pdf"><i data-ic="doc" class="fi c-red"></i><span>Contract.pdf</span></div>
-              <div class="file" data-kind="audio"><i data-ic="audio" class="fi c-purple"></i><span>Standup.m4a</span></div>
-              <div class="file" data-kind="sheet"><i data-ic="chart" class="fi c-green"></i><span>Q3_sales.xlsx</span></div>
+              <div class="file" data-kind="pdf"><i data-ic="doc" class="fi c-red"></i><span>Contract.pdf</span><em><i data-ic="search"></i>Review</em></div>
+              <div class="file" data-kind="audio"><i data-ic="audio" class="fi c-purple"></i><span>Standup.m4a</span><em><i data-ic="list"></i>To-dos</em></div>
+              <div class="file" data-kind="sheet"><i data-ic="chart" class="fi c-green"></i><span>Q3_sales.xlsx</span><em><i data-ic="up"></i>Chart</em></div>
             </div>
+            <svg class="drag-guide" viewBox="0 0 236 150"><path d="M118 92 C 150 120, 170 126, 190 122"/><path class="hd" d="M183 115 L192 122 L182 128"/></svg>
             <div class="avatar"><i></i><i></i><b></b></div>
-            <div class="screen-hint">drop here</div>
           </div>
           <div class="laptop-base"></div>
         </div>
@@ -86,32 +86,32 @@
     </div>
 
     <div class="pane" data-pane="tap">
-      <p class="prompt"><span class="pulse"></span>Tap the phone on Nibble's orange nose.</p>
+      <p class="prompt" id="tapPrompt"><span class="pulse"></span>Tap the phone on Nibble's orange nose.</p>
       <div class="stage" id="st-tap"><div class="stage-inner">
         <div class="desk"></div>
-        <div class="robot-host" style="left:170px"></div>
+        <div class="robot-host" style="left:150px"></div>
         <div class="phone big" id="tapPhone" style="left:470px; bottom:70px"><div class="phone-screen"></div></div>
       </div></div>
-      <div class="ctrls"><button class="btn small ghost" id="tapReset"><i data-ic="reset"></i>Reset</button></div>
+      <div class="ctrls"><button class="btn small" id="tapGo"><i data-ic="play"></i><span>Tap it for me</span></button><button class="btn small ghost" id="tapReset"><i data-ic="reset"></i>Reset</button></div>
     </div>
 
     <div class="pane" data-pane="snap">
-      <p class="prompt"><span class="pulse"></span>Drag a paper into the frame. Nibble snaps it.</p>
+      <p class="prompt" id="snapPrompt"><span class="pulse"></span>Ava has a lunch receipt to log.</p>
       <div class="stage" id="st-show"><div class="stage-inner">
-        <div class="desk"></div>
-        <div class="laptop" style="left:18px">
-          <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
-          <div class="laptop-base"></div>
+        <div class="cam" id="snapCam">
+          <div class="person big" id="ava"></div>
+          <div class="desk"></div>
+          <div class="laptop" style="left:384px">
+            <div class="laptop-screen"><div class="desktop"></div></div>
+            <div class="laptop-base"></div>
+          </div>
+          <div class="robot-host snapbot"></div>
+          <svg class="cone" id="snapCone" viewBox="0 0 680 400"><polygon points="0,0 0,0 0,0"/></svg>
+          <div class="s-receipt" id="snapReceipt"><b>JOE'S PIZZA</b><span>2 slices 9.00</span><span>Salad 12.40</span><span>Drinks 6.00</span><span>Tip 5.00</span><b>$32.40</b></div>
+          <div class="cam-tag" id="camTag"><span>Camera</span></div>
         </div>
-        <div class="robot-host" style="left:268px"></div>
-        <div class="vf" id="vf"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><span class="vf-label">Hold it here</span><div class="vf-slot"></div></div>
-        <div class="papers">
-          <div class="pp receipt" data-kind="receipt"><b>JOE'S PIZZA</b><span>2 slices 9.00</span><span>Salad 12.40</span><span>Drinks 6.00</span><span>Tip 5.00</span><b>$32.40</b></div>
-          <div class="pp invoice" data-kind="invoice"><b>INVOICE</b><span>#8812</span><span>Acme Supply</span><span class="ln"></span><span class="ln s"></span><b>$1,280</b></div>
-          <div class="pp board" data-kind="board"><svg viewBox="0 0 60 44"><rect x="3" y="3" width="54" height="38" rx="3" fill="none" stroke="#2F6BFF" stroke-width="1.6"/><rect x="9" y="9" width="20" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.2"/><rect x="33" y="9" width="18" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.2"/><rect x="9" y="24" width="42" height="10" rx="3" fill="none" stroke="#FF6B3D" stroke-width="1.6"/></svg><span>Sprint plan</span></div>
-        </div>
-      </div></div>
-      <div class="ctrls"><button class="btn small ghost" id="showReset"><i data-ic="reset"></i>Reset</button></div>
+      </div><div class="cine on" id="snapCine"><i></i><i></i></div></div>
+      <div class="ctrls"><button class="btn small" id="snapGo"><i data-ic="camera"></i><span>Snap it</span></button><button class="btn small ghost" id="showReset"><i data-ic="reset"></i>Reset</button></div>
     </div>
   </article>
 
@@ -125,13 +125,9 @@
         <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
         <div class="laptop-base"></div>
       </div>
-      <div class="robot-host" style="left:280px"></div>
-      <div class="slip-wrap" id="slipWrap">
-        <div class="printer-lip"></div>
-        <div class="slip" id="slip"></div>
-        <div class="pencil" id="pencil"><svg viewBox="0 0 120 24"><polygon points="0,12 18,4 18,20" fill="#F3D2A2"/><polygon points="0,12 7,9 7,15" fill="#333"/><rect x="18" y="4" width="78" height="16" fill="#FFC93C"/><rect x="18" y="4" width="78" height="5" fill="#FFD866"/><rect x="96" y="4" width="10" height="16" fill="#C9CED6"/><rect x="106" y="4" width="12" height="16" rx="4" fill="#FF8FA3"/></svg></div>
-        <div class="stamp" id="stamp">ALL DONE</div>
-      </div>
+      <div class="robot-host" style="left:270px"></div>
+      <div class="pin-spot" style="left:474px; top:22px; width:186px"></div>
+      <div class="pencil"></div>
     </div></div>
     <div class="ctrls"><button class="btn small" id="morningGo"><i data-ic="sun"></i>Good morning</button><button class="btn small ghost" id="morningReset"><i data-ic="reset"></i>Reset</button></div>
   </article>
@@ -151,10 +147,13 @@
         <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
         <div class="laptop-base"></div>
       </div>
+      <div class="bankcard" id="bankCard"><div class="bc-top"><span class="bc-chip"></span><span class="bc-brand">my bank</span></div><div class="bc-num">&bull;&bull;&bull;&bull; 4821</div><div class="bc-bal"><small>Balance</small><b>$4,200.00</b></div></div>
       <div class="robot-host" style="left:340px"></div>
+      <div class="inbox" id="inbox"></div>
+      <div class="shop" id="shop"><div class="shop-amt">+$0</div></div>
+      <div class="press-hand" id="pressHand"></div>
       <div class="pat-hint" id="patHint"><i data-ic="hand"></i><span>pat</span></div>
       <div class="undo-chip" id="undoChip"><i data-ic="reset"></i>Pat its back to undo · <span>10</span>s</div>
-      <div class="tray" id="decideTray"></div>
     </div></div>
     <div class="ctrls"><button class="btn small ghost" id="decideAgain"><i data-ic="reset"></i>New request</button>
       <span class="legend"><b>Pat</b> yes · <b>Hold 3s</b> yes to big things · <b>Push away</b> no</span></div>
@@ -184,8 +183,9 @@
       <div class="o-receipt" id="officeReceipt"><b>BEAN THERE</b><span>Latte 5.20</span><span>Cold brew 4.80</span><span>Croissant ×2 9.00</span><span>Tax 4.40</span><b>$23.40</b></div>
       <div class="ophone" id="miaPhone" style="left:118px"><div class="op-screen"></div></div>
       <div class="ophone" id="samPhone" style="left:466px"><div class="op-screen"></div></div>
+      <div class="zphone" id="zPhone"><div class="zp-in"><div class="phone big"><div class="phone-screen"></div></div></div></div>
     </div></div>
-    <div class="ctrls"><button class="btn small" id="officeGo"><i data-ic="play"></i><span>Find us a time</span></button><button class="btn small ghost" id="officeReset"><i data-ic="reset"></i>Reset</button></div>
+    <div class="ctrls"><button class="btn small" id="officeGo"><i data-ic="play"></i><span>Start</span></button><button class="btn small ghost" id="officeReset"><i data-ic="reset"></i>Reset</button></div>
   </article>
 </section>
 
@@ -208,8 +208,9 @@
         <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
         <div class="laptop-base"></div>
       </div>
-      <div class="robot-host" style="left:330px"></div>
-      <div class="tray" id="dayTray"></div>
+      <div class="robot-host" style="left:322px"></div>
+      <div class="pin-spot" style="left:512px; top:14px; width:154px"></div>
+      <div class="pencil"></div>
       <div class="d-cap" id="dayCap"></div>
     </div></div>
     <div class="dayline">
@@ -223,20 +224,12 @@
 <section class="section" id="meet">
   <div class="sec-head">
     <h2>Meet Nibble</h2>
-    <p>Tap the dots.</p>
+    <p>Six parts. Tap one to see it work.</p>
   </div>
   <div class="meet">
     <div class="meet-stage" id="meetStage">
       <div class="meet-robot" id="meetRobot"></div>
     </div>
-    <ul class="parts" id="parts">
-      <li data-part="eyes"><b>Sees</b><span>A camera reads paper you hold up.</span></li>
-      <li data-part="head"><b>Feels a pat</b><span>Touch-sensitive head for approvals.</span></li>
-      <li data-part="face"><b>Shows what matters</b><span>Three lines. Color means risk.</span></li>
-      <li data-part="led"><b>Glows</b><span>Blue when working, yellow when it needs you.</span></li>
-      <li data-part="nose"><b>Tap to share</b><span>Phones hand files over with a tap.</span></li>
-      <li data-part="printer"><b>Prints</b><span>Plans, notes and receipts you can hold.</span></li>
-    </ul>
   </div>
 </section>
 
