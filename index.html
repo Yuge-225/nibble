@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nibble — AI With a Body</title>
-<meta name="description" content="Nibble is a desktop robot that gives your AI agents a body: feed it files, watch it work, get results you can hold, and approve with a pat on the head.">
+<meta name="description" content="Nibble is a desktop robot that gives your AI agents a body: feed it files, watch it work, and approve important actions with a pat on the head.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='6' y='10' width='52' height='42' rx='16' fill='%23FFF4E6' stroke='%23FF6B3D' stroke-width='4'/><rect x='14' y='18' width='36' height='26' rx='9' fill='%23151A24'/><rect x='22' y='24' width='6' height='10' rx='3' fill='%236FF3D3'/><rect x='36' y='24' width='6' height='10' rx='3' fill='%236FF3D3'/></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,11 +14,9 @@
   <a class="brand" href="#top"><span class="brand-dot"></span>Nibble</a>
   <nav class="nav-links">
     <a href="#problem">Problem</a>
-    <a href="#loop">The loop</a>
     <a href="#demos">Demos</a>
     <a href="#day">A day with Nibble</a>
     <a href="#build">How it works</a>
-    <a href="#plan">Plan</a>
   </nav>
   <button class="sound-btn" id="soundBtn" aria-pressed="true" title="Toggle sound">🔊 Sound on</button>
 </header>
@@ -30,14 +28,14 @@
   <div class="hero-copy">
     <p class="eyebrow">Startup Studio · team pitch</p>
     <h1>AI shouldn't only live<br>inside a screen.</h1>
-    <p class="lede">Nibble is a desktop robot that gives your AI agents a body. Feed it files, watch it work, get results you can hold, and approve important actions with a pat on the head.</p>
+    <p class="lede">Nibble is a desktop robot that gives your AI agents a body. Feed it files, watch it work, and approve important actions with a pat on the head.</p>
     <div class="hero-cta">
       <a class="btn primary" href="#demos">Try the demos ↓</a>
       <a class="btn ghost" href="#day">Watch a full workday</a>
     </div>
     <ul class="chips">
       <li>Works with Claude · ChatGPT · Claude Code</li>
-      <li>Voice + touch + NFC + camera + printer</li>
+      <li>Voice · touch · NFC · camera · printer</li>
     </ul>
   </div>
   <div class="hero-stage">
@@ -53,310 +51,190 @@
   <div class="cards three">
     <article class="card">
       <div class="card-icon">⏳</div>
-      <h3>Agents run in the background. You can't tell when they need you.</h3>
-      <p>People now run several agents at once (coding, research, email). They keep switching windows to check what's done, what's stuck, and what's waiting for approval.</p>
+      <h3>You can't tell when your agents need you.</h3>
+      <p>Agents run in the background. You keep switching windows to see what's done, what's stuck, and what's waiting for you.</p>
     </article>
     <article class="card">
       <div class="card-icon">🧾</div>
-      <h3>Getting physical things into AI is clunky.</h3>
-      <p>Receipts, whiteboards, sketches, files on a coworker's phone. Each one means photographing, uploading, and copy-pasting before the AI can even start.</p>
+      <h3>Physical things are hard to hand to AI.</h3>
+      <p>Receipts, whiteboards, files on a coworker's phone: photograph, upload, copy-paste, every time.</p>
     </article>
     <article class="card">
       <div class="card-icon">⚠️</div>
       <h3>Clicking "Approve" is too easy.</h3>
-      <p>Agents can now send emails, change files and move money. One careless click on a dialog box can't be undone.</p>
+      <p>Agents now send emails and move money. One careless click can't be undone.</p>
     </article>
   </div>
-  <div class="callout">
-    <strong>Why not just another gadget?</strong> Humane AI Pin and Rabbit R1 tried to replace the phone and lost. Nibble doesn't replace anything. It's the <em>body</em> for the AI tools you already use. It does what a screen can't: it stays in your peripheral vision, takes physical things, gives you paper, and makes you decide with your hands.
-  </div>
-</section>
-
-<!-- LOOP -->
-<section class="section" id="loop">
-  <p class="eyebrow">The core loop</p>
-  <h2>Feed it → watch it work → hold the result → you decide.</h2>
   <div class="loop">
-    <a class="loop-node" href="#d-drag"><span class="ln-num">1</span><span class="ln-emoji">🍪</span><b>Feed it</b><small>Drag onto its avatar · tap your phone · hold up paper</small></a>
+    <a class="loop-node" href="#ch-feed"><span class="ln-emoji">🍪</span><b>Feed it</b></a>
     <span class="loop-arrow">→</span>
-    <a class="loop-node" href="#d-body"><span class="ln-num">2</span><span class="ln-emoji">🧠</span><b>Watch it work</b><small>Its body turns to your screen while it works, and back to you when it's done</small></a>
+    <a class="loop-node" href="#ch-work"><span class="ln-emoji">🧠</span><b>Watch it work</b></a>
     <span class="loop-arrow">→</span>
-    <a class="loop-node" href="#d-output"><span class="ln-num">3</span><span class="ln-emoji">🧾</span><b>Hold the result</b><small>Sent to your laptop or phone · printed slip · face brief</small></a>
-    <span class="loop-arrow">→</span>
-    <a class="loop-node" href="#d-confirm"><span class="ln-num">4</span><span class="ln-emoji">✋</span><b>You decide</b><small>Pat to approve · hold to pay · push away to reject</small></a>
+    <a class="loop-node" href="#ch-decide"><span class="ln-emoji">✋</span><b>You decide</b></a>
+    <span class="loop-arrow">＋</span>
+    <a class="loop-node" href="#ch-share"><span class="ln-emoji">🤝</span><b>Share with coworkers</b></a>
   </div>
-  <a class="loop-extra" href="#d-social">＋ <b>The office hub:</b> coworkers tap their phones on Nibble to swap contacts, files, bills and messages →</a>
 </section>
 
 <!-- DEMOS -->
 <section class="section demos" id="demos">
   <p class="eyebrow">Interactive demos</p>
-  <h2>Play with it. Every demo below is interactive.</h2>
-  <p class="sub">Drag things around, tap phones, pat its head. On mobile, tap an item instead of dragging it.</p>
+  <h2>Play with it.</h2>
+  <p class="sub">Four chapters, one for each part of the loop. On a phone, tap items instead of dragging them.</p>
 
-  <!-- 1 DRAG -->
-  <div class="demo" id="d-drag">
-    <div class="demo-copy">
-      <span class="tag">Input · 01</span>
-      <h3>Drag a file onto its avatar</h3>
-      <p>Your laptop has a little Nibble avatar in the corner. Drop a file on it and the robot on your desk turns to the screen and <em>eats</em> it. What happens on screen gets a reaction in the real world.</p>
-      <ol class="steps">
-        <li>Drag any file from the laptop desktop onto the avatar (bottom-right).</li>
-        <li>Watch Nibble turn, chomp, chew, and report back.</li>
-      </ol>
-      <div class="ctrls"><button class="btn small ghost" data-reset="drag">↺ Reset</button></div>
+  <!-- CHAPTER 1: FEED -->
+  <article class="chapter" id="ch-feed">
+    <header class="ch-head">
+      <span class="ch-num">01</span>
+      <div><h3>Feed it</h3><p>Three ways to hand Nibble something, without uploading anything yourself.</p></div>
+    </header>
+    <div class="subtabs" data-tabs="feed">
+      <button class="on" data-v="drag"><span>🖱️</span>Drag to its avatar</button>
+      <button data-v="tap"><span>📱</span>Tap your phone</button>
+      <button data-v="show"><span>📸</span>Hold up paper</button>
     </div>
-    <div class="stage" id="st-drag"><div class="stage-inner">
-      <div class="wall-label">Your desk</div>
-      <div class="desk"></div>
-      <div class="laptop" style="left:22px">
-        <div class="laptop-screen">
-          <div class="desktop">
-            <div class="file" data-kind="pdf"><span class="fi">📄</span><span>Contract_v3.pdf</span></div>
-            <div class="file" data-kind="link"><span class="fi">🔗</span><span>PR #231</span></div>
-            <div class="file" data-kind="audio"><span class="fi">🎙️</span><span>Standup.m4a</span></div>
+
+    <!-- 1a drag -->
+    <div class="tabpane on" data-pane="drag">
+      <p class="hint-line"><b>Drag a file onto the little Nibble in the corner of the laptop.</b> Nibble's eyes follow it the whole way.</p>
+      <div class="stage" id="st-drag"><div class="stage-inner">
+        <div class="desk"></div>
+        <div class="laptop" style="left:18px">
+          <div class="laptop-screen">
+            <div class="desktop">
+              <div class="file" data-kind="pdf"><span class="fi">📄</span><span>Contract_v3.pdf</span></div>
+              <div class="file" data-kind="audio"><span class="fi">🎙️</span><span>Standup.m4a</span></div>
+              <div class="file" data-kind="sheet"><span class="fi">📊</span><span>Q3_sales.xlsx</span></div>
+            </div>
+            <div class="avatar"><i></i><i></i><b></b></div>
+            <div class="screen-hint">drop on me ↘</div>
           </div>
-          <div class="avatar"><i></i><i></i><b></b></div>
-          <div class="screen-hint">drop on me ↘</div>
+          <div class="laptop-base"></div>
         </div>
-        <div class="laptop-base"></div>
+        <div class="hand-mouse" id="dragHand"></div>
+        <div class="robot-host" style="left:440px"></div>
+        <svg class="fake-cursor" id="dragCursor" viewBox="0 0 14 20"><path d="M1 1 L1 16 L5 12 L8 19 L11 18 L8 11 L13 11 Z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div></div>
+      <div class="ctrlbar">
+        <button class="btn small primary" id="dragAuto">▶ Show me</button>
+        <button class="btn small ghost" id="dragReset">↺ Reset</button>
       </div>
-      <div class="robot-host" style="left:360px"></div>
-    </div></div>
-  </div>
-
-  <!-- 2 NFC -->
-  <div class="demo" id="d-nfc">
-    <div class="demo-copy">
-      <span class="tag">Input · 02</span>
-      <h3>Tap your phone on its nose</h3>
-      <p>Nibble's nose has an NFC tag that holds a link. Tapping it opens the Nibble app straight to an <b>upload page that already knows which robot you tapped</b>. NFC only does the handshake, and the file itself goes over Wi-Fi, so size isn't a problem.</p>
-      <div class="seg" data-seg="nfcMode">
-        <button class="on" data-v="give">Hand it over</button>
-        <button data-v="take">Take it back</button>
-        <button data-v="stranger">Unknown phone</button>
-      </div>
-      <div class="seg" data-seg="nfcOS">
-        <button class="on" data-v="ios">iPhone (App Clip)</button>
-        <button data-v="android">Android</button>
-      </div>
-      <ol class="steps">
-        <li>Drag the phone onto the orange NFC nose, or tap the phone.</li>
-        <li>Pick something on the upload page. Nibble reacts differently to photos, PDFs and links.</li>
-      </ol>
-      <p class="note">With iPhone <b>App Clips</b>, a coworker or visitor can tap and upload without installing anything.</p>
     </div>
-    <div class="stage" id="st-nfc"><div class="stage-inner">
-      <div class="wall-label">Phone ⇄ Nibble</div>
-      <div class="desk"></div>
-      <div class="robot-host" style="left:200px"></div>
-      <div class="phone" id="nfcPhone" style="left:500px; bottom:78px">
-        <div class="phone-screen" data-view="home"></div>
-      </div>
-    </div></div>
-  </div>
 
-  <!-- 3 SHOW -->
-  <div class="demo" id="d-show">
-    <div class="demo-copy">
-      <span class="tag">Input · 03</span>
-      <h3>Hold paper up to its eyes</h3>
-      <p>This is the one a screen can't do. Hold up a receipt, a whiteboard sketch or a sticky note. Nibble's eyes follow it, it snaps a photo, and the agent takes it from there.</p>
-      <ol class="steps">
-        <li>Drag a piece of paper toward Nibble. Watch its eyes track it.</li>
-        <li>Drop it on its face. Try the blurry receipt too.</li>
-      </ol>
-      <div class="ctrls"><button class="btn small ghost" data-reset="show">↺ Reset</button></div>
+    <!-- 1b tap -->
+    <div class="tabpane" data-pane="tap">
+      <p class="hint-line"><b>Drag the phone to Nibble's orange nose</b> (or just tap the phone). Pick something to send, and watch it fly over.</p>
+      <div class="stage" id="st-tap"><div class="stage-inner">
+        <div class="desk"></div>
+        <div class="robot-host" style="left:170px"></div>
+        <div class="phone big" id="tapPhone" style="left:470px; bottom:70px"><div class="phone-screen"></div></div>
+      </div></div>
+      <div class="ctrlbar"><button class="btn small ghost" id="tapReset">↺ Reset</button></div>
     </div>
-    <div class="stage" id="st-show"><div class="stage-inner">
-      <div class="wall-label">Real-world input</div>
-      <div class="desk"></div>
-      <div class="robot-host" style="left:150px"></div>
-      <div class="paper-items">
-        <div class="pitem receipt" data-kind="receipt">
-          <b>JOE'S PIZZA</b><span>2× slice ..... 9.00</span><span>Salad ........ 12.40</span><span>Drinks ....... 6.00</span><span>Tip .......... 5.00</span><b>TOTAL $32.40</b>
+
+    <!-- 1c show -->
+    <div class="tabpane" data-pane="show">
+      <p class="hint-line"><b>Drag a piece of paper into the dashed frame.</b> Nibble takes a photo, and your AI handles the rest.</p>
+      <div class="stage" id="st-show"><div class="stage-inner">
+        <div class="desk"></div>
+        <div class="laptop" style="left:18px">
+          <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
+          <div class="laptop-base"></div>
         </div>
-        <div class="pitem board" data-kind="board">
-          <svg viewBox="0 0 120 80"><rect x="6" y="6" width="108" height="68" rx="4" fill="none" stroke="#2F6BFF" stroke-width="2"/><rect x="18" y="16" width="84" height="10" rx="3" fill="none" stroke="#222" stroke-width="1.6"/><rect x="18" y="32" width="84" height="10" rx="3" fill="none" stroke="#222" stroke-width="1.6"/><rect x="40" y="50" width="40" height="13" rx="6" fill="none" stroke="#FF6B3D" stroke-width="2"/><text x="60" y="59" font-size="7" text-anchor="middle" fill="#FF6B3D" font-family="Comic Sans MS, cursive">Login</text></svg>
-          <span>Login page sketch</span>
+        <div class="robot-host" style="left:268px"></div>
+        <div class="vf" id="vf"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><span class="vf-label">Hold it here 📸</span><div class="vf-slot"></div></div>
+        <div class="papers">
+          <div class="pp receipt" data-kind="receipt"><b>JOE'S PIZZA</b><span>2 slices 9.00</span><span>Salad 12.40</span><span>Drinks 6.00</span><span>Tip 5.00</span><b>$32.40</b></div>
+          <div class="pp invoice" data-kind="invoice"><b>INVOICE</b><span>#8812</span><span>Acme Supply</span><span>━━━━━</span><span>━━━ ━━</span><b>$1,280</b></div>
+          <div class="pp board" data-kind="board"><svg viewBox="0 0 60 44"><rect x="3" y="3" width="54" height="38" rx="3" fill="none" stroke="#2F6BFF" stroke-width="1.6"/><rect x="9" y="9" width="20" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.2"/><rect x="33" y="9" width="18" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.2"/><rect x="9" y="24" width="42" height="10" rx="3" fill="none" stroke="#FF6B3D" stroke-width="1.6"/><path d="M29 13 L33 13" stroke="#222"/></svg><span>Sprint plan</span></div>
         </div>
-        <div class="pitem sticky" data-kind="note">Call client back before Friday!! ☎️</div>
-        <div class="pitem receipt blurry" data-kind="blurry">
-          <b>CAFÉ ????</b><span>Latte ....... ?.??</span><span>Croissant ... ?.??</span><b>TOTAL $?.??</b>
-        </div>
-      </div>
-    </div></div>
-  </div>
-
-  <!-- 4 BODY -->
-  <div class="demo" id="d-body">
-    <div class="demo-copy">
-      <span class="tag">Working · 04</span>
-      <h3>Its body is the agent's status</h3>
-      <p>No more switching windows. Nibble <b>faces your laptop while it works</b> and <b>turns back to you</b> when it's done or needs you. You can read it from the corner of your eye, from across the room.</p>
-      <div class="state-grid">
-        <button data-state="listen">👂 Listening</button>
-        <button data-state="work">💻 Working</button>
-        <button data-state="need">👀 Needs you</button>
-        <button data-state="done">🎉 Done</button>
-        <button data-state="error">😰 Error</button>
-        <button data-state="away">🪑 You left</button>
-        <button data-state="back">👋 You're back</button>
-      </div>
-      <div class="ctrls"><button class="btn small primary" id="bodyAuto">▶ Auto-cycle</button></div>
-      <p class="state-caption" id="bodyCaption">Pick a state.</p>
+      </div></div>
+      <div class="ctrlbar"><button class="btn small ghost" id="showReset">↺ Reset</button></div>
     </div>
-    <div class="stage" id="st-body"><div class="stage-inner">
-      <div class="wall-label">Body language</div>
+  </article>
+
+  <!-- CHAPTER 2: WORK -->
+  <article class="chapter" id="ch-work">
+    <header class="ch-head">
+      <span class="ch-num">02</span>
+      <div><h3>Watch it work</h3><p>Nibble faces your laptop while the AI works, then turns back to you with the result.</p></div>
+    </header>
+    <p class="hint-line"><b>Give Nibble a task.</b> Then try leaving your desk before it finishes.</p>
+    <div class="stage" id="st-work"><div class="stage-inner">
       <div class="desk"></div>
-      <div class="laptop" style="left:22px">
-        <div class="laptop-screen"><div class="term" id="bodyTerm"></div><div class="avatar"><i></i><i></i><b></b></div></div>
+      <div class="laptop" style="left:18px">
+        <div class="laptop-screen"><div class="desktop" id="workDesktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
         <div class="laptop-base"></div>
       </div>
-      <div class="robot-host" style="left:350px"></div>
-      <div class="chair" title="your chair">🪑</div>
-      <div class="tray" id="bodyTray"></div>
+      <div class="robot-host" style="left:320px"></div>
+      <div class="chair" id="workChair">🪑<small>you</small></div>
+      <div class="tray" id="workTray"></div>
     </div></div>
-  </div>
-
-  <!-- 5 OUTPUT -->
-  <div class="demo" id="d-output">
-    <div class="demo-copy">
-      <span class="tag">Output · 05</span>
-      <h3>Results you can hold</h3>
-      <p><b>Screen</b> for things you glance at. <b>Paper</b> for things you keep. Nibble can spit a file back onto your laptop, print a slip from its mouth, or show a three-line brief on its face.</p>
-      <h4>Send back to laptop</h4>
-      <div class="ctrls"><button class="btn small" id="outLaptop">💻 "Summary is on your desktop"</button></div>
-      <h4>Print a slip</h4>
-      <div class="ctrls wrap">
-        <button class="btn small" data-print="todo">📋 Today's to-dos</button>
-        <button class="btn small" data-print="meeting">📝 Meeting notes</button>
-        <button class="btn small" data-print="decision">✅ Decision receipt</button>
-        <button class="btn small" data-print="win">🏆 Weekly wins</button>
-      </div>
-      <h4>Face brief: three lines, color means risk</h4>
-      <div class="ctrls wrap">
-        <button class="btn small lvl-g" data-brief="g">🟢 Safe</button>
-        <button class="btn small lvl-y" data-brief="y">🟡 Take a look</button>
-        <button class="btn small lvl-r" data-brief="r">🔴 High risk</button>
-      </div>
+    <div class="ctrlbar wrap">
+      <button class="btn small" data-task="bug">🐛 Fix the login bug</button>
+      <button class="btn small" data-task="sum">🎙️ Summarize the standup</button>
+      <button class="btn small" data-task="plan">📋 Plan my day</button>
+      <span class="sep"></span>
+      <button class="btn small ghost" id="workAway">🚶 Leave desk</button>
     </div>
-    <div class="stage" id="st-output"><div class="stage-inner">
-      <div class="wall-label">Output</div>
+  </article>
+
+  <!-- CHAPTER 3: DECIDE -->
+  <article class="chapter" id="ch-decide">
+    <header class="ch-head">
+      <span class="ch-num">03</span>
+      <div><h3>You decide</h3><p>Risky actions wait for your hand on Nibble. The riskier the action, the more deliberate the gesture.</p></div>
+    </header>
+    <div class="subtabs small" data-tabs="risk">
+      <button class="on" data-v="y"><span>📧</span>Send an email · <em>pat</em></button>
+      <button data-v="r"><span>💳</span>Pay $1,280 · <em>hold 3 s</em></button>
+    </div>
+    <p class="hint-line" id="decideHint"><b>Click Nibble's head to pat it</b> and approve. Drag the head sideways to push it away and cancel.</p>
+    <div class="stage" id="st-decide"><div class="stage-inner">
       <div class="desk"></div>
-      <div class="laptop" style="left:22px">
-        <div class="laptop-screen"><div class="desktop" id="outDesktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
+      <div class="laptop" style="left:18px">
+        <div class="laptop-screen"><div class="desktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
         <div class="laptop-base"></div>
       </div>
-      <div class="robot-host" style="left:300px"></div>
-      <div class="tray" id="outTray"></div>
+      <div class="robot-host" style="left:340px"></div>
+      <div class="pat-hint" id="patHint">👈<span>pat</span></div>
+      <div class="undo-chip" id="undoChip">↩ Pat its back to undo · <span>10</span>s</div>
+      <div class="tray" id="decideTray"></div>
     </div></div>
-  </div>
-
-  <!-- 6 CONFIRM -->
-  <div class="demo" id="d-confirm">
-    <div class="demo-copy">
-      <span class="tag">Decide · 06</span>
-      <h3>You decide, with your hands</h3>
-      <p>The riskier the action, the more deliberate the gesture. <b>Interact with Nibble's head directly:</b></p>
-      <div class="seg" data-seg="risk">
-        <button data-v="g">🟢 Tidy files</button>
-        <button class="on" data-v="y">🟡 Email finance</button>
-        <button data-v="r">🔴 Pay $1,280</button>
-      </div>
-      <ul class="gest">
-        <li><b>Pat</b> (click the head) → approve</li>
-        <li><b>Hold 3 s</b> (high risk) → the ring fills up, then it runs</li>
-        <li><b>Push away</b> (drag the head sideways) → reject</li>
-        <li><b>Pat its back</b> (click the body) within 10 s → undo</li>
-      </ul>
-      <div class="ctrls"><button class="btn small primary" id="confirmGo">▶ Start request</button></div>
-      <h4>More controls</h4>
-      <div class="ctrls wrap">
-        <button class="btn small" data-x="stop">✋ Palm up: STOP</button>
-        <button class="btn small" data-x="eyes">🙈 Cover its eyes</button>
-        <button class="btn small" data-x="dnd">😴 Lay it down</button>
-        <button class="btn small" data-x="wake">👆👆 Knock on desk</button>
-      </div>
-      <div class="log" id="confirmLog"><div class="log-empty">Decision log is empty.</div></div>
+    <div class="ctrlbar">
+      <button class="btn small ghost" id="decideAgain">↻ New request</button>
+      <div class="legend"><span>👋 pat = yes</span><span>✊ hold 3 s = yes to risky</span><span>↔ push away = no</span><span>🫳 pat its back = undo</span></div>
     </div>
-    <div class="stage" id="st-confirm"><div class="stage-inner">
-      <div class="wall-label">Physical consent</div>
-      <div class="desk" id="confirmDesk" title="double-click to knock"></div>
-      <div class="laptop" style="left:22px">
-        <div class="laptop-screen"><div class="term" id="confirmTerm"></div><div class="avatar"><i></i><i></i><b></b></div></div>
-        <div class="laptop-base"></div>
-      </div>
-      <div class="robot-host" style="left:350px"></div>
-      <div class="undo-chip" id="undoChip">↩ Pat my back to undo · <span>10</span>s</div>
-      <div class="tray" id="confirmTray"></div>
-    </div></div>
-  </div>
+  </article>
 
-  <!-- 7 WOW -->
-  <div class="demo" id="d-wow">
-    <div class="demo-copy">
-      <span class="tag">Personality · 07</span>
-      <h3>Wow moments</h3>
-      <p>Little moments that make people grab their phones and film it. They also keep Nibble useful after the novelty wears off.</p>
-      <div class="state-grid">
-        <button data-wow="back">👋 You're back</button>
-        <button data-wow="follow">👀 Eyes follow you</button>
-        <button data-wow="stretch">🧘 Sat too long</button>
-        <button data-wow="late">🌙 Working late</button>
-        <button data-wow="meeting">🔇 In a meeting</button>
-        <button data-wow="focus">🎧 Focus mode</button>
-        <button data-wow="fail">💥 Build failed</button>
-        <button data-wow="merge">🎆 PR merged</button>
-        <button data-wow="big">👷 Big task</button>
-      </div>
+  <!-- CHAPTER 4: SHARE -->
+  <article class="chapter" id="ch-share">
+    <header class="ch-head">
+      <span class="ch-num">04</span>
+      <div><h3>Share with coworkers</h3><p>On a coffee break, Nibble is the office's relay station. Two taps, and something passes between people.</p></div>
+    </header>
+    <div class="subtabs small" data-tabs="social">
+      <button class="on" data-v="card"><span>🤝</span>Swap contacts</button>
+      <button data-v="aa"><span>💰</span>Split the bill</button>
+      <button data-v="msg"><span>💬</span>Leave a message</button>
+      <button data-v="guest"><span>👋</span>Visitor</button>
     </div>
-    <div class="stage" id="st-wow"><div class="stage-inner">
-      <div class="wall-label">Personality</div>
-      <div class="desk"></div>
-      <div class="laptop" style="left:22px">
-        <div class="laptop-screen"><div class="term" id="wowTerm"></div><div class="avatar"><i></i><i></i><b></b></div></div>
-        <div class="laptop-base"></div>
-      </div>
-      <div class="robot-host" style="left:350px"></div>
-      <div class="tray" id="wowTray"></div>
-      <div class="sky" id="wowSky"></div>
-    </div></div>
-  </div>
-
-  <!-- 8 SOCIAL -->
-  <div class="demo" id="d-social">
-    <div class="demo-copy">
-      <span class="tag">Office hub · 08</span>
-      <h3>Coworkers tap to share</h3>
-      <p>On a coffee break, Nibble becomes the office's <b>relay station and messenger</b>. Two people tap and something passes between them. Or one person leaves something for a coworker, and Nibble hands it over when they get back.</p>
-      <div class="seg wrap" data-seg="social">
-        <button class="on" data-v="card">🤝 Swap contacts</button>
-        <button data-v="aa">💰 Split the bill</button>
-        <button data-v="msg">💬 Leave a message</button>
-        <button data-v="cal">📅 Find a time</button>
-        <button data-v="kudos">🙌 Kudos</button>
-        <button data-v="guest">👋 Visitor</button>
-      </div>
-      <p class="state-caption" id="socialCaption">Tap Lin's phone first.</p>
-      <div class="ctrls"><button class="btn small ghost" id="socialReset">↺ Reset</button></div>
-    </div>
+    <p class="hint-line" id="socialCaption">Tap Lin's phone first.</p>
     <div class="stage" id="st-social"><div class="stage-inner">
-      <div class="wall-label">Coffee break</div>
       <div class="desk"></div>
-      <div class="phone small" id="phoneA" style="left:40px; bottom:78px"><div class="phone-screen"></div></div>
+      <div class="phone small" id="phoneA" style="left:60px; bottom:76px"><div class="phone-screen"></div></div>
       <div class="robot-host" style="left:255px"></div>
-      <div class="phone small" id="phoneB" style="left:545px; bottom:78px"><div class="phone-screen"></div></div>
+      <div class="phone small" id="phoneB" style="left:525px; bottom:76px"><div class="phone-screen"></div></div>
       <div class="printed" id="socialCard"></div>
     </div></div>
-  </div>
+    <div class="ctrlbar"><button class="btn small ghost" id="socialReset">↺ Reset</button></div>
+  </article>
 </section>
 
 <!-- DAY -->
 <section class="section" id="day">
   <p class="eyebrow">Run it end to end</p>
   <h2>A day with Nibble</h2>
-  <p class="sub">We'll refine the product with developers, who are our first users. The office-admin story is the one we tell on Demo Day, because anyone gets it instantly.</p>
   <div class="seg big" data-seg="persona">
     <button class="on" data-v="dev">👩‍💻 Lin, developer</button>
     <button data-v="clerk">👨‍💼 Chen, office admin</button>
@@ -370,11 +248,11 @@
       <div class="stage" id="st-day"><div class="stage-inner">
         <div class="wall-label" id="dayClock">09:00</div>
         <div class="desk"></div>
-        <div class="laptop" style="left:22px">
-          <div class="laptop-screen"><div class="desktop" id="dayDesktop"></div><div class="term" id="dayTerm"></div><div class="avatar"><i></i><i></i><b></b></div></div>
+        <div class="laptop" style="left:18px">
+          <div class="laptop-screen"><div class="desktop" id="dayDesktop"></div><div class="avatar"><i></i><i></i><b></b></div></div>
           <div class="laptop-base"></div>
         </div>
-        <div class="robot-host" style="left:330px"></div>
+        <div class="robot-host" style="left:320px"></div>
         <div class="tray" id="dayTray"></div>
       </div></div>
       <p class="day-caption" id="dayCaption">Press play, or click any moment on the left.</p>
@@ -385,92 +263,20 @@
 <!-- BUILD -->
 <section class="section" id="build">
   <p class="eyebrow">How it works</p>
-  <h2>The robot is the face and hands. The brain lives on your computer and in the cloud.</h2>
+  <h2>Nibble is the face and hands. The brain stays on your computer and in the cloud.</h2>
   <div class="arch">
-    <div class="arch-box"><span>🤖</span><b>Nibble robot</b><small>Mic · speaker · camera · face screen · pan servo · LED ring · touch head · NFC tag · thermal printer</small></div>
-    <div class="arch-arrow">⇄<small>Wi-Fi / BLE</small></div>
-    <div class="arch-box"><span>💻</span><b>Companion app</b><small>Menu-bar avatar, local file access, the agent loop, approval queue. Phone app + App Clip for uploads.</small></div>
-    <div class="arch-arrow">⇄<small>API · MCP</small></div>
-    <div class="arch-box"><span>🧠</span><b>Models + tools</b><small>Claude / ChatGPT, Claude Code, email, calendar, drive, Slack, Venmo…</small></div>
-  </div>
-  <h3 class="mt">Prototype bill of materials</h3>
-  <div class="table-wrap"><table class="tbl">
-    <thead><tr><th>Part</th><th>Job</th><th>Approx. cost</th></tr></thead>
-    <tbody>
-      <tr><td>ESP32-S3 with camera</td><td>Brain on the robot, Wi-Fi, camera snapshots</td><td>~$15</td></tr>
-      <tr><td>1.5–2" round/rect LCD</td><td>Eyes, expressions, three-line briefs</td><td>~$10</td></tr>
-      <tr><td>2 × micro servos</td><td>Turn to laptop / turn to you, nod</td><td>~$8</td></tr>
-      <tr><td>I²S mic + small speaker</td><td>Voice in and out</td><td>~$8</td></tr>
-      <tr><td>WS2812 LED ring</td><td>Status at a glance</td><td>~$4</td></tr>
-      <tr><td>Capacitive touch pad</td><td>Pat / hold-to-confirm / pat-back undo</td><td>~$2</td></tr>
-      <tr><td>NTAG215 sticker</td><td>Tap-to-open upload page</td><td>~$0.50</td></tr>
-      <tr><td>58 mm thermal printer</td><td>Printed slips</td><td>~$20</td></tr>
-      <tr><td>3D-printed shell</td><td>Character</td><td>~$10</td></tr>
-    </tbody>
-    <tfoot><tr><td colspan="2"><b>Prototype total</b></td><td><b>≈ $80</b></td></tr></tfoot>
-  </table></div>
-  <p class="note">Costs are rough estimates for a hand-built prototype. We can start from open-source ESP32 voice-assistant projects instead of from scratch.</p>
-</section>
-
-<!-- PLAN -->
-<section class="section" id="plan">
-  <p class="eyebrow">Market, model, plan</p>
-  <h2>Where it fits, and how we'd test it this semester</h2>
-
-  <h3>Landscape</h3>
-  <div class="table-wrap"><table class="tbl">
-    <thead><tr><th>Product</th><th>What it is</th><th>The gap</th></tr></thead>
-    <tbody>
-      <tr><td>Anki Vector / Cozmo</td><td>Early desktop robots with personality</td><td>Company struggled; pre-LLM brains</td></tr>
-      <tr><td>Emo, Eilik</td><td>Cute expressive desk pets</td><td>Cute, but not connected to your work</td></tr>
-      <tr><td>Humane AI Pin, Rabbit R1</td><td>AI gadgets</td><td>Tried to replace the phone</td></tr>
-      <tr><td>AI plush companions</td><td>LLM toys, mostly for kids</td><td>Emotional only, consumer-toy market</td></tr>
-      <tr class="hl"><td><b>Nibble</b></td><td>A desk pet that is the body of <b>your</b> AI tools</td><td>Plugs into real workflows: agent status, files, approvals</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">This landscape is based on our current understanding and still needs proper research.</p>
-
-  <div class="cards three mt">
-    <article class="card"><div class="card-icon">🎯</div><h3>First users</h3><p>Developers and students who run AI agents all day and already spend on desk setups (mechanical keyboards, monitors, figures).</p></article>
-    <article class="card"><div class="card-icon">💵</div><h3>Business model</h3><p>Hardware at $99–199, plus an optional subscription that covers model usage. Bring-your-own API key for power users. Shells and personalities as add-ons.</p></article>
-    <article class="card"><div class="card-icon">🏢</div><h3>Expansion</h3><p>Shared office hub: one Nibble per team for check-ins, visitors, handoffs and bill splitting. That opens up B2B sales.</p></article>
-  </div>
-
-  <h3 class="mt">MVP roadmap</h3>
-  <div class="roadmap">
-    <div class="rm"><span class="pill p0">P0</span><b>Core loop</b><p>Avatar drag-to-eat · turn to laptop / to you · face brief · pat to approve</p></div>
-    <div class="rm"><span class="pill p1">P1</span><b>Memorable</b><p>Thermal printer slips · hold paper up to the camera</p></div>
-    <div class="rm"><span class="pill p2">P2</span><b>Social</b><p>Phone tap → App Clip upload page · swap contacts with a printed topic card</p></div>
-    <div class="rm"><span class="pill p3">Later</span><b>Delight</b><p>Gestures (palm stop, cover eyes) · bill split · task handoff</p></div>
-  </div>
-
-  <h3 class="mt">Risks we're watching</h3>
-  <div class="cards two">
-    <article class="card"><h3>📉 Novelty wears off</h3><p>Jibo and Anki struggled with exactly this. Our answer: tie Nibble to daily work, not just cuteness.</p></article>
-    <article class="card"><h3>🏭 Hardware is hard</h3><p>Manufacturing, QA, shipping. Start with small batches and a pre-order page.</p></article>
-    <article class="card"><h3>🐘 Big players</h3><p>OpenAI and others are exploring devices. We focus on a niche they won't build for: agent-heavy desks.</p></article>
-    <article class="card"><h3>💸 Model costs</h3><p>Per-user monthly API cost has to fit inside the subscription. Bring-your-own key helps.</p></article>
-  </div>
-
-  <div class="metric">
-    <div>
-      <p class="eyebrow">The one metric</p>
-      <h2>Do people still talk to it on day 7?</h2>
-      <p>Validation plan: put 5–10 prototypes on classmates' desks for a week. Track how many times per day they feed it, pat it, or print. Launch a 30-second video and a pre-order page to measure demand.</p>
-    </div>
-    <ol class="weeks">
-      <li><b>Wk 1–2</b> ESP32 prototype: talks, has eyes, turns its head</li>
-      <li><b>Wk 3–4</b> Connect Claude Code status + approvals</li>
-      <li><b>Wk 5</b> 30 s demo video + pre-order page</li>
-      <li><b>Wk 6+</b> 5–10 desks for a week → measure day-7 use</li>
-    </ol>
+    <div class="arch-box"><span>🤖</span><b>Nibble</b><small>Mic, speaker, camera, face screen, turning head, LED ring, touch-sensitive head, NFC nose, little printer</small></div>
+    <div class="arch-arrow">⇄</div>
+    <div class="arch-box"><span>💻</span><b>Companion app</b><small>The avatar on your laptop, access to your files, the approval queue, plus a phone app for tap-to-send</small></div>
+    <div class="arch-arrow">⇄</div>
+    <div class="arch-box"><span>🧠</span><b>Your AI tools</b><small>Claude, ChatGPT, Claude Code, plus email, calendar, drive and Slack</small></div>
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <p><b>Nibble</b> is a working name. Pitch prototype for a Startup Studio team. Everything on this page is a simulation of the planned hardware.</p>
+  <p><b>Nibble</b> is a working name. Everything on this page is a simulation of the planned hardware.</p>
 </footer>
 
 <script src="app.js"></script>
